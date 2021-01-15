@@ -8,15 +8,15 @@ class Directory extends React.Component {
     super()
 
     this.state = {
-      sections: []
+      sections: sections
     }
 
   }
 
   //when it mounts the component, grab the array of objects from the data file
-  componentDidMount() {
-     this.setState({sections: sections})    
-  }
+  // componentDidMount() {
+  //    this.setState({sections: sections})    
+  // }
 
   render () {
     return (
