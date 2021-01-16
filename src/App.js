@@ -14,16 +14,9 @@ class App extends React.Component {
     this.state = {
       currentUser: null
     }
+    
   }
-
-  /*
-  These methods basically do the following:
-
-  on componentDidMount, auth.onAuthStateChanged is taking the user object provided from the Firebase login
-  and setting it to our Apps state of currentUser.
-
-  on componentWillUnmount, when we logout, it will call unsubscribeFromAuth which will remove the user state.
-  */
+  
   unsubscribeFromAuth = null
 
   componentDidMount() {
@@ -38,13 +31,10 @@ class App extends React.Component {
                 ...snapShot.data()
               }
             })
-           console.log(this.state) 
           })
-        } 
-        
-        this.setState({currentUser: userAuth})
-        
-        console.log(this.state)
+        } else {
+          this.setState({currentUser: userAuth})
+        }
       })
   }
 

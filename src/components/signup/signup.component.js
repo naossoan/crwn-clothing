@@ -17,6 +17,7 @@ class SignUp extends React.Component {
   }
 
   handleSubmit = async e => {
+    //this prevents the default functionality of the 'submit' button type.
     e.preventDefault()
 
     const { displayName, email, password, confirmPassword } = this.state
@@ -61,7 +62,7 @@ class SignUp extends React.Component {
             name='displayName'
             type='text'
             value={displayName}
-            handleChange={this.handleChange}
+            onChange={this.handleChange}
             label='Display Name'
             required
           />
@@ -70,7 +71,7 @@ class SignUp extends React.Component {
             name='email'
             type='email'
             value={email}
-            handleChange={this.handleChange}
+            onChange={this.handleChange}
             label='Email'
             required
           />
@@ -79,7 +80,7 @@ class SignUp extends React.Component {
             name='password'
             type='password'
             value={password}
-            handleChange={this.handleChange}
+            onChange={this.handleChange}
             label='Password'
             required
           />
@@ -88,7 +89,7 @@ class SignUp extends React.Component {
             name='confirmPassword'
             type='password'
             value={confirmPassword}
-            handleChange={this.handleChange}
+            onChange={this.handleChange}
             label='Confirm Password'
             required
           />          
